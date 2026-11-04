@@ -1,0 +1,16 @@
+<!--
+  Trimmer roots for the iOS scene-adoption shim (chapter 12).
+
+  SceneDelegate re-parents MonoGame's detached UIWindow into the real
+  UIWindowScene by reflection: it reads MonoGame's private `<code>services</code>`
+  dictionary on GameServiceContainer and the private `<code>_mainWindow</code>`
+  field on iOSGamePlatform. Under IL trimming those members look unreferenced,
+  so this descriptor keeps them.
+-->
+<linker>
+  <assembly fullname="MonoGame.Framework">
+    <type fullname="Microsoft.Xna.Framework.GameServiceContainer" preserve="all" />
+    <type fullname="Microsoft.Xna.Framework.GamePlatform" preserve="all" />
+    <type fullname="Microsoft.Xna.Framework.iOSGamePlatform" preserve="all" />
+  </assembly>
+</linker>

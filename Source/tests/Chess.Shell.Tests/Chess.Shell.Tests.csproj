@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Shell tests: verify the *device-agnostic* pieces of the shell (input
+    snapshots, camera transforms, safe-area clamping) in plain headless NUnit,
+    which is exactly what chapter 2 promises. The engine suite stays in
+    Chess.Core.Tests; this project additionally references the shell.
+  -->
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <IsPackable>false</IsPackable>
+    <RootNamespace>Chess.Desktop.Tests</RootNamespace>
+    <AssemblyName>Chess.Shell.Tests</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+    <PackageReference Include="NUnit" Version="3.14.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Chess.Desktop\Chess.Desktop.csproj" />
+  </ItemGroup>
+
+</Project>

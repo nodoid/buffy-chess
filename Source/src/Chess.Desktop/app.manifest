@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<assembly manifestVersion="1.0" xmlns="urn:schemas-microsoft-com:asm.v1">
+  <assemblyIdentity version="1.0.0.0" name="BuffyChess.Desktop" />
+
+  <!-- Windows 11 runs this game on laptops at 150% scaling and on 4K monitors at
+       250%. Without a DPI declaration the OS treats the process as "system DPI
+       aware": it renders at 100% into a small window and then bitmap-stretches
+       the result, so the board is soft and the mouse hit-testing is off by the
+       scale factor. Per-monitor v2 tells Windows to hand us real pixels and to
+       notify us when the window moves to a different monitor. -->
+  <application xmlns="urn:schemas-microsoft-com:asm.v3">
+    <windowsSettings>
+      <dpiAware xmlns="http://schemas.microsoft.com/SMI/2005/WindowsSettings">true/pm</dpiAware>
+      <dpiAwareness xmlns="http://schemas.microsoft.com/SMI/2016/WindowsSettings">PerMonitorV2, PerMonitor</dpiAwareness>
+      <longPathAware xmlns="http://schemas.microsoft.com/SMI/2016/WindowsSettings">true</longPathAware>
+    </windowsSettings>
+  </application>
+
+  <!-- The game is a single-window DirectX-style app: it needs no elevation and
+       should never trigger the UAC shield on its shortcut. -->
+  <trustInfo xmlns="urn:schemas-microsoft-com:asm.v2">
+    <security>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+
+  <!-- Declare Windows 10/11 compatibility explicitly: without this the loader
+       may apply Windows 7 compatibility shims and report an older version to
+       anything that asks. -->
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" /> <!-- Windows 10/11 -->
+    </application>
+  </compatibility>
+</assembly>

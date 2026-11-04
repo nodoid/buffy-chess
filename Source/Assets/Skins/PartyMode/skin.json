@@ -1,0 +1,22 @@
+{
+  "name": "Party Mode",
+  "version": "0.9-test",
+  "author": "ChessGameBook",
+  "license": "MIT",
+  "slots": {
+    "piece.white.pawn": "wp.png",
+    "piece.white.rook": "wn.png",
+    "piece.white.knight": "wb.png",
+    "piece.white.bishop": "wr.png",
+    "piece.white.queen": "wq.png",
+    "piece.white.king": "wk.png",
+    "piece.black.pawn": "bp.png",
+    "piece.black.rook": "bn.png",
+    "piece.black.knight": "bb.png",
+    "piece.black.bishop": "br.png",
+    "piece.black.king": "bk.png",
+    "board.light": "board_light.png",
+    "board.dark": "board_dark.png",
+    "hud.title": "Party Mode"
+  }
+}

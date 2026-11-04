@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Merged into the SDK-generated Info.plist before the bundle is signed
+  (PartialAppManifest in Chess.iOS.csproj). Three things live here:
+
+  * UIApplicationSceneManifest - Xcode 27 made the UIScene life cycle
+    mandatory; without it UIKit traps at launch.
+  * CFBundleIconFiles - the springboard icon set written by tools/icons.py.
+  * UILaunchScreen - the launch (splash) image, iOS 14+ style. No storyboard,
+    no asset catalogue: just a PNG the OS centres while the shell boots.
+
+  Editing this file is the supported route; patching a signed .app with
+  PlistBuddy would invalidate the signature.
+-->
+<plist version="1.0">
+<dict>
+    <key>UIApplicationSceneManifest</key>
+    <dict>
+        <key>UIApplicationSupportsMultipleScenes</key>
+        <false/>
+        <key>UISceneConfigurations</key>
+        <dict>
+            <key>UIWindowSceneSessionRoleApplication</key>
+            <array>
+                <dict>
+                    <key>UISceneConfigurationName</key>
+                    <string>Default Configuration</string>
+                    <key>UISceneDelegateClassName</key>
+                    <string>SceneDelegate</string>
+                </dict>
+            </array>
+        </dict>
+    </dict>
+
+    <key>CFBundleIconFiles</key>
+    <array>
+        <string>AppIcon60</string>
+        <string>AppIcon76</string>
+    </array>
+
+    <key>UILaunchScreen</key>
+    <dict>
+        <key>UIImageName</key>
+        <string>Splash-Portrait</string>
+        <key>UIImageRespectsSafeAreaInsets</key>
+        <false/>
+    </dict>
+
+    <!-- Portrait only: the board is a single tall column with the HUD above it,
+         and the book's 3D camera derives its aspect from the viewport. Without
+         this key the SDK warns "Supported iPhone orientations have not been
+         set" and the app inherits every orientation, including upside down. -->
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+    </array>
+</dict>
+</plist>

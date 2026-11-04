@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The game's clear colour, with the brand plate centred on top. A layer-list
+     keeps the art at its intrinsic size (no stretching) on every screen. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+  <item>
+    <color android:color="#181A26" />
+  </item>
+  <item android:gravity="center">
+    <bitmap android:src="@drawable/splash_art" android:gravity="center" />
+  </item>
+</layer-list>

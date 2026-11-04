@@ -1,0 +1,24 @@
+# --- build artefacts ------------------------------------------------------
+**/bin/
+**/obj/
+**/dist/
+Source/tmp-provision/
+*.user
+*.userosscache
+.vs/
+.vscode/
+TestResults/
+*.DS_Store
+
+# --- the book itself (written separately, not part of the code repo) ------
+/Chapters/
+/Images/
+/Covers/
+/tools/
+/assets/
+/BuffyChess-Complete.pdf
+/BuffyChess-Kindle.epub
+
+# --- personal -------------------------------------------------------------
+# Nothing personal to the author goes in this repo: no keystores, no
+# provisioned profiles, no environment files, no signing identities.

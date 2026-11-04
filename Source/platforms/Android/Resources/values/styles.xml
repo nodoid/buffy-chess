@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Chapter 12's Android launch screen. Android draws this theme before the
+  Activity's first frame, so the player sees the brand plate instead of a white
+  flash while MonoGame boots and the shared chess game builds its atlas.
+-->
+<resources>
+  <style name="Theme.Splash" parent="@android:style/Theme.NoTitleBar.Fullscreen">
+    <item name="android:windowBackground">@drawable/splash_bg</item>
+    <item name="android:windowFullscreen">true</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowActionBar">false</item>
+  </style>
+</resources>

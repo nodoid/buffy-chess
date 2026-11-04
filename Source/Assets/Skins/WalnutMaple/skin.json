@@ -1,0 +1,24 @@
+{
+  "name": "Walnut & Maple",
+  "version": "1.0",
+  "author": "ChessGameBook",
+  "license": "MIT",
+  "slots": {
+    "board.light": "board_light.png",
+    "board.dark": "board_dark.png",
+    "piece.white.pawn": "wp.png",
+    "piece.white.rook": "wn.png",
+    "piece.white.knight": "wb.png",
+    "piece.white.bishop": "wr.png",
+    "piece.white.queen": "wq.png",
+    "piece.white.king": "wk.png",
+    "piece.black.pawn": "bp.png",
+    "piece.black.rook": "bn.png",
+    "piece.black.knight": "bb.png",
+    "piece.black.bishop": "br.png",
+    "piece.black.queen": "bq.png",
+    "piece.black.king": "bk.png",
+    "hud.icon": "icon.png",
+    "hud.title": "Walnut & Maple"
+  }
+}
